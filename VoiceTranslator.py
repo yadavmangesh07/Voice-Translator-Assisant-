@@ -93,12 +93,29 @@ text1 = text_to_translate_1.text
 # module for speaking the translated text into the input destination language  
 # selected by the user which is stored in to_language.  
 # We have also given third argument as False because it speaks very slowly by # default  
-speak = gTTS(text = text1, lang= to_language, slow = False)  
+speak = gTTS(text = text1, lang= to_language)  
     
 # We will be using the save() function for saving the translated speech in #captured_JTP_voice.mp3 file  
 speak.save("captured_JTP_voice.mp3")  
     
 # Now at last, we will be using the OS module for running the translated voice.  
 PS('captured_JTP_voice.mp3',block= False)  
-#os.remove('captured_JTP_voice.mp3')  
+#os.remove('captured_JTP_voice.mp3')
+import pygame
+
+pygame.init()
+
+# Load the audio file
+pygame.mixer.music.load("captured_JTP_voice.mp3")
+
+# Play the audio file
+pygame.mixer.music.play()
+
+# Keep the program running until the audio finishes playing
+while pygame.mixer.music.get_busy():
+    continue
+
+# Clean up the Pygame library
+pygame.quit()
+
 print(text1)  
