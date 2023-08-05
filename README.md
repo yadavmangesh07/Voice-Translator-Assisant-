@@ -1,4 +1,4 @@
-# miniproject
+# Miniproject
 
 # Voice Translator Using Python
 
