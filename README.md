@@ -1,5 +1,3 @@
-# Miniproject
-
 # Voice Translator Using Python
 
 This is a project that implements a voice translator using Python. The application captures audio input from the user and uses speech recognition to identify the language being spoken. It then uses a translation library to convert the speech to the desired language.
